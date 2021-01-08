@@ -31,7 +31,7 @@ open class FunctionCall<Arg, Value> {
         return capturedArguments.last
     }
 
-    fileprivate(set) var stubbedBlocks: [ReturnStub<Arg, Value>] = []
+    public fileprivate(set) var stubbedBlocks: [ReturnStub<Arg, Value>] = []
 
     open func on(_ filter: @escaping (Arg) -> Bool) -> ReturnContext<Arg, Value> {
         let stub = ReturnStub<Arg, Value>(filter: filter)
@@ -41,7 +41,7 @@ open class FunctionCall<Arg, Value> {
 
     public init() {}
 
-    func capture(_ argument: Arg) {
+    public func capture(_ argument: Arg) {
         callsCount += 1
         capturedArguments += [argument]
     }

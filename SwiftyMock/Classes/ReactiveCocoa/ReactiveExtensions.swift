@@ -5,8 +5,8 @@
 
 // MARK: Reactive Function Call Mock/Stub/Spy
 
+import SwiftyMock
 import ReactiveSwift
-import Result
 
 // MARK: - Reactive Call Mock/Stub/Spy
 
